@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">NMedia</string>
-    <string name="Text">NMedia!</string>
+    <string name="authorAvatar" translatable="false">authorAvatar</string>
+    <string name="iconMoreVert" translatable="false">iconMoreVert</string>
 </resources>
