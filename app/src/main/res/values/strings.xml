@@ -2,4 +2,7 @@
     <string name="app_name">NMedia</string>
     <string name="authorAvatar" translatable="false">authorAvatar</string>
     <string name="iconMoreVert" translatable="false">iconMoreVert</string>
+    <string name="view_logo" translatable="false">view_logo</string>
+    <string name="share_logo" translatable="false">share_logo</string>
+    <string name="like_logo" translatable="false">like_logo</string>
 </resources>

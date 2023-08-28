@@ -56,11 +56,10 @@
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/topBarr"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        app:constraint_referenced_ids="authorAvatar,published"
+        android:layout_height="wrap_content"
         app:barrierDirection="bottom"
-        />
+        app:constraint_referenced_ids="authorAvatar,published" />
 
     <TextView
         android:id="@+id/content"
@@ -73,6 +72,77 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topBarr"
         tools:text="@sample/posts.json/data/content" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/topBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="content" />
+
+    <ImageView
+        android:id="@+id/like_log"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginTop="@dimen/second_spacing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar2"
+        tools:src="@drawable/baseline_heart_broken_24"
+        android:contentDescription="@string/like_logo" />
+
+    <TextView
+        android:id="@+id/like_cont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/second_spacing"
+        app:layout_constraintBottom_toBottomOf="@id/like_log"
+        app:layout_constraintStart_toEndOf="@id/like_log"
+        app:layout_constraintTop_toTopOf="@id/like_log"
+        tools:text="10" />
+
+    <ImageView
+        android:id="@+id/share_log"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:src="@drawable/baseline_share_24"
+        app:layout_constraintBottom_toBottomOf="@id/like_cont"
+        app:layout_constraintStart_toEndOf="@id/like_cont"
+        app:layout_constraintTop_toTopOf="@id/like_cont"
+        android:contentDescription="@string/share_logo" />
+
+    <TextView
+        android:id="@+id/share_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/second_spacing"
+        app:layout_constraintBottom_toBottomOf="@id/share_log"
+        app:layout_constraintStart_toEndOf="@id/share_log"
+        app:layout_constraintTop_toTopOf="@id/share_log"
+        tools:text="5" />
+
+    <ImageView
+        android:id="@+id/view_logo"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintEnd_toStartOf="@id/view_cont"
+        app:layout_constraintTop_toTopOf="@id/share_count"
+        app:layout_constraintBottom_toBottomOf="@id/share_count"
+        android:layout_marginEnd="@dimen/second_spacing"
+        android:src="@drawable/baseline_remove_red_eye_24"
+        android:contentDescription="@string/view_logo" />
+
+    <TextView
+        android:id="@+id/view_cont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/share_count"
+        app:layout_constraintBottom_toBottomOf="@id/share_count"
+        android:layout_marginEnd="@dimen/common_spacing"
+        tools:text="500" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
